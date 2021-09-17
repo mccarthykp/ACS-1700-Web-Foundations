@@ -7,3 +7,4 @@
 3. [CSS Assessment](https://github.com/mccarthykp/ACS-1700-Web-Foundations/blob/main/Past%20Assignments/CSS-Assessment/styles.css)
 4. [Portfolio Part 2 (CSS)](https://github.com/mccarthykp/ACS-1700-Web-Foundations/blob/main/Portfolio/css/styles.css)
 5. [Lab 3 - Background Images & Grid](https://github.com/mccarthykp/ACS-1700-Web-Foundations/tree/main/Lab-3)
+6. [Lab 4 - Plant Watering](https://github.com/mccarthykp/ACS-1700-Web-Foundations/tree/main/Lab-4)
