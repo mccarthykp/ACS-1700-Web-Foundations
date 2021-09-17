@@ -90,13 +90,10 @@
 			// the box and false when there is no check mark. 
 		
 			// TODO: You need to display a message in messageP use: 
-			// messageP.innerHTML = "some message"
+			// messageP.innerHTML = ""
 			// You want to display "Time to water!" if days is greater than 3. 
 			// and isSucculent is false. 
-
-            if (days > 3 && isSucculent == false) {
-                messageP.innerHTML = "Time to water!";
-            } else if (days > 13 && isSucculent == true) {
+            if ((days > 3 && isSucculent == false) || (days > 13 && isSucculent == true)) {
                 messageP.innerHTML = "Time to water!";
             } else {
                 messageP.innerHTML = "No need to water";

@@ -1,0 +1,199 @@
+html, body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: white;
+    height: 100vh;
+    width: 100vw;
+}
+
+.bold-span-text {
+    font-weight: 700;
+}
+
+.content {
+    position: relative;
+    width: 70%;
+    /* margin: 45rem auto 0; */
+    margin: auto;
+}
+
+h2.intro-name {
+    margin-top: 12.5rem;
+}
+
+.hidden {
+    display: none;
+}
+
+.highlight {
+    color: black;
+}
+
+.intro-name {
+    color: black;
+    font-weight: 700;
+    font-size: 6rem;
+    text-align: left;
+    margin-bottom: 0;
+}
+
+.intro-p {
+    color: dimgray;
+    font-size: 2rem;
+    font-weight: 400;
+    text-align: left;
+    line-height: 3.5rem;
+    width: 100%;
+    margin-bottom: 5rem;
+}
+
+.mail-btn {
+    border: 1px;
+    border-color: #033dff;
+    border-radius: .5rem;
+    border-style: solid;
+    background-color: #033dff;
+    color: white;
+    cursor: pointer;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 1.35rem;
+    padding: 1.4rem 2.05rem;
+    margin-top: 2rem;
+    text-decoration: none;
+    letter-spacing: .25rem;
+    filter: drop-shadow(.25rem .25rem .5rem silver);
+    overflow: hidden;
+    transition: all .3s;
+}
+
+.mail-btn:focus {
+    outline: 0;
+}
+
+.mail-btn:hover {
+    border-color: #1d51ff;
+    background-color: #1d51ff;
+    filter: drop-shadow(.25rem, .5rem, .5rem, silver);
+    padding-right: 4.5rem;
+}
+
+.mail-link {
+    text-decoration: none;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+}
+
+.memoji {
+    max-width: 4.5rem;
+    max-height: 4.5rem;
+    vertical-align: middle;
+    margin-right: 2rem;
+}
+
+.reply-time {
+    margin-top: 5rem;
+}
+
+.reply-time-bold {
+    font-weight: 600;
+}
+
+.reply-time-text {
+    font-size: 1rem;
+    text-decoration: none;
+    color: black;
+}
+
+.reply-time-text:hover {
+    color: #033dff;
+}
+
+/* Work Experience ~-~-~-~-~-~-~-~~-~-~-~-~-~-~-~~-~-~-~-~-~-~-~~-~-~-~-~-~-~-~ */ 
+
+#experience {
+    margin-top: 10.5rem;
+    font-size: 1.5rem;
+    color: #666;
+}
+
+#experience a {
+    text-decoration: none;
+}
+
+#experience a:hover {
+    text-decoration: underline;
+    text-decoration-color: #000;
+}
+
+#experience h1 {
+    font-size: 2rem;
+}
+
+#experience h1, h2 {
+    color: #000;
+}
+
+#experience h2 {
+    font-size: 1.5rem;
+}
+
+.oal_color {
+    color: rgb(58, 25, 0);
+}
+
+.shopify_color {
+    color: #96bf48;
+}
+
+.workplaces {
+    width: 73%;
+}
+
+.workplace_shopify {
+    margin-bottom: 8rem;
+}
+
+/* FOOTER ~-~-~-~-~-~-~-~~-~-~-~-~-~-~-~~-~-~-~-~-~-~-~~-~-~-~-~-~-~-~ */ 
+
+.copyright {
+    color: #5e5e5e;
+    font-size: .8rem;
+    line-height: 8rem;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+footer {
+    top: 10%;
+    margin: 28rem auto 6rem;
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.fa {
+    color: #000;
+    font-size: 1.75rem;
+    text-decoration: none;
+    margin-right: 2rem;
+}
+
+.fa:hover {
+    color: #033dff;
+}
+
+.footer-socials {
+    display: inline-flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: flex-end;
+}
