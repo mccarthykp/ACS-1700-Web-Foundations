@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Water me!</title>
+</head>
+<body>
+
+	<!-- Markup -->
+	<div class="container">
+		<div>
+			<label class="days-label">
+				Days since last Watering: 
+				<input type="number" id="days-since" value="1" />
+			</label>
+			<label class="succulent-label">
+				<input type="checkbox" id="is-succulent" />
+				Is succulent
+			</label>
+		</div>
+
+		<p id="message"></p>
+	</div>
+
+	<!-- Scripts -->
+	<script>
+		/* 
+		
+		Follow the instructions here to make a plant watering advice page
+
+		The markup above contains three elements with id's. 
+		input#days-since allows us to input a number and 
+		input#is-succulent is a checkbox. Last is p#message
+		is a p tag where we will display a message. 
+
+		The goal is to display a message when we enter a number
+		and or check the box. The message will appear in p#message. 
+
+		*/ 
+
+		// We need a reference to the input#days-since define a variable
+		// for this and assign a value with document.querySelector()
+		// Like this: 
+		const daysSinceInput = document.querySelector('#days-since');
+
+		// TODO: Make a variable for the isSucculent check box enter
+		// the id name of this element here:
+		const isSucculentInput = document.querySelector('#is-succulent');
+
+		// TODO: Use document.querySelector to get a reference to 
+		// p#message here:
+		const messageP = document.querySelector('#message');
+
+		// It's good for us to define some variables for these HTML elements
+		// here and use these variables in the code below when we need 
+		// access to those elements. This only needs to be done once if we 
+		// store the values in variables! These variables won't be reassigned
+		// so it's best to use const! 
+
+		// To have our code respond to changes in user input we "listen"
+		// for changes. To listen for changes add an event listener to 
+		// element that might change. In our case both the inputs 
+		// might change. 
+
+		// Here we listen for an "input" event at daysSinceInput. When 
+		// an input occurs, someone has changed the number, we handle
+		// that input with the update function. Here we used the name 
+		// update and the function is defined below. 
+		daysSinceInput.addEventListener('input', update);
+
+		// TODO: Add an event listener to isSucculentInput. The type of 
+		// event should be 'input' and the handler should be: update. 
+		isSucculentInput.addEventListener('input', update);
+
+		// This update function is going to handle changes to the inputs 
+		// above and display a message in p#message. The listeners you added 
+		// adove are going to call this function when a change occurs. 
+
+		function update(e) {
+			// Get the value from the days input
+			const days = daysSinceInput.value;
+
+			// TODO: Get the checked value from the is succulement input. Replace
+			// false below with: isSucculentInput.checked.
+			const isSucculent = isSucculentInput.checked;
+
+			// The checked property will be true when there is a check in 
+			// the box and false when there is no check mark. 
+		
+			// TODO: You need to display a message in messageP use: 
+			// messageP.innerHTML = "some message"
+			// You want to display "Time to water!" if days is greater than 3. 
+			// and isSucculent is false. 
+
+            if (days > 3 && isSucculent == false) {
+                messageP.innerHTML = "Time to water!";
+            } else if (days > 13 && isSucculent == true) {
+                messageP.innerHTML = "Time to water!";
+            } else {
+                messageP.innerHTML = "No need to water";
+            }
+			// or if days is greater than 13 and isSucculent is true
+			// otherwise display "No need to water."
+		}
+
+	</script>
+	<!-- Styles -->
+	<style>
+		
+		body {
+			font-family: "Helvetica Neue";
+			font-weight: 300;
+			font-size: 18px;
+			
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+		}
+
+		.container {
+            background-color: antiquewhite;
+			border: 1px solid;
+            border-radius: 15px;
+			padding: 2rem;
+		}
+
+		.container div {
+			display: flex;
+			flex-direction: column;
+		}
+
+		input {
+			font-size: 1rem;
+			padding: 0.5rem;
+			border: 1px solid;
+			padding: 0.5rem;
+			margin: 1rem 0 0 0;
+            background-color: rgb(238, 238, 238);
+		}
+
+		label.days-label {
+			display: flex;
+			text-align: center;
+			flex-direction: column;
+            color: rgb(0, 0, 0);
+		}
+
+		#is-succulent {
+			margin: 1rem 1rem 0 0;
+		}
+
+		p {
+			margin: 1rem 0 0 0;
+		}
+
+	</style>
+</body>
+</html>
