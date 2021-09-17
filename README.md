@@ -2,4 +2,8 @@
 
 ### Assignments
 
-1. []()
+1. [Portfolio Part 1 (HTML)](https://github.com/mccarthykp/ACS-1700-Web-Foundations/blob/main/Portfolio/index.html)
+2. [Markup Assessment](https://github.com/mccarthykp/ACS-1700-Web-Foundations/blob/main/Past%20Assignments/challenge-6.html)
+3. [CSS Assessment](https://github.com/mccarthykp/ACS-1700-Web-Foundations/blob/main/Past%20Assignments/CSS-Assessment/styles.css)
+4. [Portfolio Part 2 (CSS)](https://github.com/mccarthykp/ACS-1700-Web-Foundations/blob/main/Portfolio/css/styles.css)
+5. [Lab 3 - Background Images & Grid](https://github.com/mccarthykp/ACS-1700-Web-Foundations/tree/main/Lab-3)
