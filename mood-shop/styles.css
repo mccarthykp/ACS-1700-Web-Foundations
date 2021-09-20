@@ -1,4 +1,5 @@
 body {
+    background-color: rgb(244, 244, 244);
     font-family: Verdana, Tahoma, sans-serif;
     font-size: 1.45rem;
     line-height: 1.5;
@@ -7,45 +8,60 @@ body {
 
 .item {
     font-size: .75rem;
-    border: 1px black solid;
     border-radius: 15px;
-    padding: 1rem;
+    padding: 2rem;
     margin: .5rem;
     min-width: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 35px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-.item button {
+.itemData {
+    justify-content: flex-end;
+}
+
+.itemData button {
     padding: 6.5px 10px;   
-    margin-bottom: 1rem;
     border: none;
     background-color: aquamarine;
     border-radius: 5px;
     cursor: pointer;
+    justify-content: flex-end;
 }
 
-.item img {
+.itemData p {
+    font-size: .75rem;
+    text-align: center;
+}
+
+.itemImg img {
     border-radius: 12px;
     max-width: 300px;
     max-height: 300px;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
-.item p {
-    display: flex;
-    align-items: flex-start;
-}
-
-.item p:nth-child(3) {
-    margin-top: 1rem;
+.itemImg p:nth-child(2) {
+    color: rgb(109, 109, 109);
+    padding: 0 .5rem;
 }
 
 .items {
     width: 80%;
+    height: max-content;
     margin: auto;
     padding: 7rem 0;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 1em;
+    grid-gap: 4rem;
 }
 
 .items img {
@@ -68,7 +84,7 @@ body {
     display: block;
     padding: 0 0 0 1.5rem;
     text-decoration: none;
-    font-size: 1.1rem;
+    font-size: 1rem;
     margin: 0;
 }
 
