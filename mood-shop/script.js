@@ -5,7 +5,7 @@ const itemsContainer = document.querySelector('#items');
 const itemList = document.getElementById('item-list');
 const cartQty = document.getElementById('cart-qty');
 const cartTotal = document.getElementById('cart-total');
-itemList.innerHTML = '<li> Hello World</li>';
+// itemList.innerHTML = '<li> Hello World</li>';
 
 
 for (let i = 0; i < data.length; i += 1) {
@@ -13,7 +13,6 @@ for (let i = 0; i < data.length; i += 1) {
     const imgDiv = document.createElement('div');
     imgDiv.className = 'itemImg';
     itemsContainer.appendChild(imgDiv);
-    
     
     // images
 	const newDiv = document.createElement('div');
@@ -55,9 +54,14 @@ for (let i = 0; i < data.length; i += 1) {
 
 
 }
+const all_items_button = Array.from(document.querySelectorAll("button"));
+all_items_button.forEach(elt => elt.addEventListener('click', () => {
+    addItem(elt.getAttribute('id'), elt.getAttribute('data-price'));
+    showItems();
+}));
 
 // shopping cart
-const cart = [ ];
+const cart = [];
 
 function addItem(name, price) {
     for (let i = 0; i < cart.length; i += 1) {
@@ -67,7 +71,7 @@ function addItem(name, price) {
         }
     }
     const item = {name, price, qty: 1}
-    cart.push(name);
+    cart.push(item);
 }
 
 // show items
@@ -88,7 +92,6 @@ function showItems() {
     }
     itemList.innerHTML = itemStr;
 
-    // console.log(`Total in cart: $${getTotal()}`);
     cartTotal.innerHTML = `Total in cart: $${getTotal}`;
 }
 
