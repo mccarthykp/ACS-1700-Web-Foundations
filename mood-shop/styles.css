@@ -11,7 +11,7 @@ body {
     border-radius: 15px;
     padding: 2rem;
     margin: .5rem;
-    min-width: 1rem;
+    min-width: 12rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -35,6 +35,10 @@ body {
     border-radius: 5px;
     cursor: pointer;
     justify-content: flex-end;
+}
+
+.itemData button:hover {
+    background-color: rgb(109, 218, 182);
 }
 
 .itemData p {
