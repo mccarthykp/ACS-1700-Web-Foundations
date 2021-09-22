@@ -63,10 +63,33 @@ all_items_button.forEach(elt => elt.addEventListener('click', () => {
 // shopping cart
 const cart = [];
 
+// handle change events on update input
+itemList.onchange = function(e) {
+    if (e.target && e.target.classList.contains('update')) {
+        const name = e.target.dataset.name;
+        const qty = parseInt(e.target.value);
+        updateCart(name, qty);
+    }
+}
+
+
+// handle clicks on list
+itemList.onclick = function(e) {
+    const name = e.target.dataset.name; // data-name
+    if (e.target && e.target.classList.contains('remove')) {
+        removeItem(name);
+    } else if (e.target && e.target.classList.contains('add-one')) {
+        addItem(name);
+    } else if (e.target && e.target.classList.contains('remove-one')) {
+        removeItem(name, 1);
+    }
+}
+
 function addItem(name, price) {
     for (let i = 0; i < cart.length; i += 1) {
         if (cart[i].name === name) {
             cart[i].qty += 1;
+            showItems();
             return;
         }
     }
@@ -88,11 +111,16 @@ function showItems() {
         // const price = cart[i].price;
         // const qty = cart[i].qty;
         const {name, price, qty} = cart[i]
-        itemStr += `<li>${name} $${price} x ${qty} = ${qty * price}</li>`;
+        itemStr += `<li>${name} $${price} x ${qty} = ${qty * price} 
+        <button class = 'remove' data-name = '${name}'>Remove</button>
+        <button class = 'add-one' data-name = '${name}'> + </button>
+        <button class = 'remove-one' data-name = '${name}'> - </button>
+        <input class = 'update' type = 'number' min = '0' data-name = '${name}'>
+        </li>`;
     }
     itemList.innerHTML = itemStr;
 
-    cartTotal.innerHTML = `Total in cart: $${getTotal}`;
+    cartTotal.innerHTML = `Total in cart: $${getTotal()}`;
 }
 
 // get quantity
@@ -117,14 +145,29 @@ function getTotal() {
 function removeItem(name, qty = 0) {
     for (let i = 0; i < cart.length; i += 1) {
         if (cart[i].name === name) {
-            cart[i].qty -= 1;
             if (qty > 0) {
                 cart[i].qty -= qty;
             }
             if (cart[i].qty < 1 || qty === 0) {
                 cart.splice(i, 1);
             }
+            showItems()
             return;
         }
     }
 }
+
+// update cart
+function updateCart(name, qty) {
+    for (let i = 0; i < cart.length; i += 1) {
+        if (cart[i].name === name) {
+            if (qty < 1) {
+                removeItem(name);
+                return;
+            }
+            cart[i].qty = qty;
+            showItems();
+            return;
+        }
+    }
+} 
