@@ -7,16 +7,16 @@
     <title>Tip Calculator</title>
 </head>
 <body>
-    <div class="tip_calc">
-        <div class="calc_inputs">
+    <div class="tip-calc">
+        <div class="calc-inputs">
             <!-- bill input -->
-            <input id="" class="" type="text" placeholder="0.00">
+            <input id="input-bill" class="" type="number" placeholder="0.00" min="0" max="100,000" step="1">
             <!-- tip input -->
-            <input id="" class="" type="text" placeholder="15%">
+            <input id="input-tip" class="" type="number" placeholder="15%" min="0" max="50" step="1">
             <!-- num of people -->
-            <input id="" class="" type="text" placeholder="1">
+            <input id="input-people" class="" type="number" placeholder="1" min="0" max="50" step="1">
         </div>
-        <div class="calc_outputs">
+        <div class="calc-outputs">
             <!-- display tip -->
             <span>Tip </span>
             <!-- display total -->
