@@ -1,14 +1,53 @@
 body {
-    margin: 0 auto;
+    margin: auto;
     padding: 0;
-    font-size: 3rem;
+    width: 90%;
+    height: 100vh;
+    border: 1px solid wheat;
+    display: flex;
+    background-color: black;
+    color: white;
 }
 
 .tip-calc {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    align-items: center;
+    border: 1px solid cyan;
+    margin: auto;
+    padding: 0 5rem;
+    border-radius: 15px;
 }
 
 .calc-inputs {
-    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid cyan;
+    margin: 3rem 0 3rem 0;
+    padding: 0 5rem 0 0;
+    width: 50%;
+}
+
+.inputs {
+    font-family: Verdana, Tahoma, sans-serif;
+    font-size: 1.5rem;
+    padding: .85rem;
+    margin: 1rem 0;
+    border-radius: 8px;
+    border: none;
+    text-align: center;
+}
+
+.calc-outputs {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 0 5rem;
+    border: 1px solid blue;
+}
+
+.outputs {
+    font-family: Verdana, Tahoma, sans-serif;
+    letter-spacing: .1rem;
+    padding: 2.75rem 0;
+    font-size: 1.5rem;
 }

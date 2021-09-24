@@ -4,24 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <title>Tip Calculator</title>
 </head>
 <body>
     <div class="tip-calc">
         <div class="calc-inputs">
             <!-- bill input -->
-            <input id="input-bill" class="" type="number" placeholder="0.00" min="0" max="100,000" step="1">
+            <input id="input-bill" class="inputs" type="number" placeholder="0.00" min="0" max="100,000" step="1">
             <!-- tip input -->
-            <input id="input-tip" class="" type="number" placeholder="15%" min="0" max="50" step="1">
+            <input id="input-tip" class="inputs" type="number" placeholder="15%" min="0" max="50" step="1">
             <!-- num of people -->
-            <input id="input-people" class="" type="number" placeholder="1" min="0" max="50" step="1">
+            <input id="input-people" class="inputs" type="number" placeholder="1" min="0" max="50" step="1">
         </div>
+    
         <div class="calc-outputs">
             <!-- display tip -->
-            <span>Tip </span>
+            <span class="outputs">Tip </span>
             <!-- display total -->
-            <span>Total </span>
+            <span class="outputs">Total </span>
         </div>
     </div>
 </body>
 </html>
+
