@@ -3,51 +3,85 @@ body {
     padding: 0;
     width: 90%;
     height: 100vh;
-    border: 1px solid wheat;
+    /* border: 1px solid black; */
     display: flex;
-    background-color: black;
-    color: white;
+    background-color: rgb(255, 255, 255);
+    color: black;
 }
 
 .tip-calc {
+    background-color: rgb(255, 255, 255);
+    box-shadow: 8px 8px 8px rgb(195, 195, 195), 0 0 8px 8px #fff;
     display: flex;
     flex-direction: row;
     align-items: center;
-    border: 1px solid cyan;
     margin: auto;
     padding: 0 5rem;
-    border-radius: 15px;
+    border-radius: 40px;
+    min-width: 40rem;
+    max-width: 40rem;
 }
 
 .calc-inputs {
     display: flex;
     flex-direction: column;
-    border-right: 1px solid cyan;
     margin: 3rem 0 3rem 0;
-    padding: 0 5rem 0 0;
     width: 50%;
 }
 
 .inputs {
+    background-color: rgb(245, 245, 245);
+    box-shadow: inset 6px 6px 5px rgb(195, 195, 195), inset 0px 0px 10px 8px #fff;
+    color: black;
     font-family: Verdana, Tahoma, sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     padding: .85rem;
-    margin: 1rem 0;
+    margin: 1rem 0 1rem 3rem;
     border-radius: 8px;
     border: none;
     text-align: center;
+    outline: none;
+    max-width: 16rem;
+    min-width: 16rem;
+}
+
+.inputs:focus {
+    box-shadow: inset 6px 6px 6px rgb(195, 195, 195), inset 0 0 10px 6px #fff;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
 }
 
 .calc-outputs {
     display: flex;
     flex-direction: column;
-    margin: 0 0 0 5rem;
-    border: 1px solid blue;
+    margin: 0 5rem 0 5rem;
 }
 
-.outputs {
+.output-text {
     font-family: Verdana, Tahoma, sans-serif;
     letter-spacing: .1rem;
-    padding: 2.75rem 0;
-    font-size: 1.5rem;
+    padding: 2rem 0 2rem 0;
+    font-size: 1.25rem;
+    max-width: 5rem;
+    min-width: 5rem;
+}
+
+.output-vals {
+    font-family: Verdana, Tahoma, sans-serif;
+    font-size: 1.25rem;
+    color: rgba(0, 43, 0, 0.577);
+}
+
+.tip {
+    padding-bottom: 2.5rem;
 }
