@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>FEW Assessment 10/4</title>
+</head>
+    <body>
+        <section class="upper-left">
+            <h1 class="bold">Kevin McCarthy</h1>
+            <p>FEW Assessment</p>
+        </section>
+        <section class="upper-right">
+            <p>Width:</p>
+            <input label='Width' type='number' placeholder="100">
+            <p>Height:</p>
+            <input label='Height' type="number" placeholder="100">
+            <p>Color:</p>
+            <input label='Color' type="color" class='color-selector'>
+        </section>
+        <section class="lower-left">
+            <p class="bold">Width</p>
+            <p id="width-reader" maxlength='3'>100px</p>
+            <p class="bold">Height</p>
+            <p id="height-reader">100px</p>
+            <p class="bold">Color</p>
+            <p id="color-reader">#000000</p>
+        </section>
+        <section class="lower-right">
+            <p class="bold">Color</p>
+            <div id='outputBox' class="box"></div>
+        </section>
+    
+        <script src="scripts.js"></script>
+    </body>
+</html>
