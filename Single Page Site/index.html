@@ -1,53 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <!-- Basic Required Metas -->
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="styles.css">
+    <!-- Site Metas -->
+    <title>Kevin McCarthy | Portfolio</title>
+    <meta name="keywords" content="Cincinnati San Francisco Ohio California Software Developer Portfolio Resume">
+    <meta name="description" content="Kevin McCarthy, Software Developer Portfolio and Resume">
+    <meta name="author" content="Kevin McCarthy">
 
-    <title>Single Page Site | Assignment</title>
+    <!-- Font Awesome CDN -->
+    <script src="https://kit.fontawesome.com/77fc26fe18.js" crossorigin="anonymous"></script>
+
+    <!-- JQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- CSS --> 
+    <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
-    <nav id="nav" class="navbar">
-        <ul class="nav-ul">
-            <li>Home</li>
-            <li>About</li>
-            <li>Contact</li>
-        </ul>
-    </nav>
-    
-    <main>
-        <section id="hero" class="hero">
 
-        </section>
+<body class="noselect">
 
-        <section id="info" class="info">
-            <ul class="info-ul">
-                <li class="card">
-                    <div>
-                        <p>Hello</p>
-                    </div>
-                </li>
-                <li class="card">
-                    <div>
-                        <p>Hello</p>
-                    </div>
-                </li>
-                <li class="card">
-                    <div>
-                        <p>Hello</p>
-                    </div>
-                </li>
+    <header>
+        <nav class="nav container">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="#hero" class="nav__link nav__link--logo">凯文</a></li>
             </ul>
-        </section>
 
-        <section id="more-info" class="more-info">
+            <ul class="nav__list">
+                <li class="nav__link--logo-text">Not your Average Developer</li>
+            </ul>
 
-        </section>
-    </main>
+            <ul class="nav__list">
+                <li class="nav__item nav__list-item"><a href="#hero" class="nav__link">Home</a></li>
+                <li class="nav__item nav__list-item"><a href="#two-col" class="nav__link">About</a></li>
+                <li class="nav__item nav__list-item"><a href="#experience" class="nav__link">Experience</a></li>
+                <li class="nav__item"><a href="#contact" class="nav__link--button">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <div class="container row">
+            <div class="hero__text">
+                <h1 class="hero__text--h1-1">Hello,</h1>
+                <h1 class="hero__text--h1-2">my name is Kevin</h1>
+                <p class="hero__text--p">I'm an Applied Computer Science student at Dominican 
+                    University of California, and a Shopify Dev Degree Intern focused on developing elegant, 
+                    robust and scalable digital business solutions. I've spent the past 3 years freelancing 
+                    across the United States, crafting interactive experiences and beautifully functional interfaces.</p>
+                <a href="#two-col" class="hero__btn">learn more</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- about --------------------------------------------------------->
+
+    <section id="two-col">
+        <div class="container row">  
+            <div class="col two-col__text two-col__container">
+                <h2 class="two-col__text--h2">Here's my story,</h2>
+                <p class="two-col__text--p">I am a <a class="regular-link hoverable" href="https://www.dominican.edu/academics/undergraduate-programs/applied-computer-science" target="_blank">Computer Science</a> student at Dominican University with a focus on full stack development. I have completed internships with <a class="regular-link hoverable" href="https://www.oal-law.com/" target="_blank">O'Connor, Acciani & Levy</a>, and <a class="regular-link hoverable" href="https://www.fischerhomes.com/" target="_blank">Fischer Homes</a>. During these, I prioritized gaining a broad variety of software experience, and obtained exposure to dozens of new technologies. Outside of school, I enjoy cooking, traveling, practicing percussion and wood carving.</p>
+                <a href="./files/KevinMcCarthy_Resume.pdf" target="_blank" class="about__btn">resume</a>
+            </div>
+
+            <div class="col circular-portrait two-col__container">
+                <img class="headshot" src="./img/headshot.jpg" alt="Headshot Photo">
+            </div>
+        </div>
+    </section>
+
+    <!-- experience ---------------------------------------------------->
+
+    <section id="experience">
+
+        <!-- siemens -->
+        <div class="line-1">
+            <div class="col2 exp-cont__1">
+                <h1 class="exp__h1-1">Shopify</h1>
+                <button class="exp__btn-1">Ruby</button>
+                <button class="exp__btn-1">JavaScript</button>
+                <button class="exp__btn-1">React</button>
+                <button class="exp__btn-1">Node.js</button>
+                <button class="exp__btn-1">jQuery</button>
+                <button class="exp__btn-1">API Development</button>
+                <p class="exp__p">I am currently on an 8-month training path to learn cutting edge tools and 
+                    best practices in preparation for team placements within Shopify to collaborate,
+                    develop & deploy scalable software products & solutions.</p>
+            </div>
+        </div>
+
+
+        <!-- icr -->
+        <div class="line-2">
+            <div class="col2 exp-cont__2">
+                <h1 class="exp__h1-2">O'Connor, Acciani & Levy Co., LPA</h1>
+                <button class="exp__btn-2">Python</button>
+                <button class="exp__btn-2">API Development</button>
+                <button class="exp__btn-2">CI</button>
+                <button class="exp__btn-2">Raspberry Pi</button>
+                <p class="exp__p">Built API integrations using cloud-based software. Leveraged Python and APIs to automate and streamline paralegal, clerk and secretary workflows. Handled support tickets with software and hardware vendors, collaborated with internal and external technical support to ensure 100% problem resolution. Diagnosed and resolved software and hardware issues on servers and user workstations. Installed and maintained software and hardware components on user workstations. </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- involvement ---------------------------------------------------->
+
+    <section id="two-by">
+        <div class="involvement-container">
+            <h1 class="involvement-h1">Involvement & Leadership</h1>
+            
+            <div class="container row2 involvement-row__1"> 
+                <div class="hover-link">
+                    <a style="display:block; color: #fff; opacity: .9" href="https://www.facebook.com/RockRobotics/" target="_blank" class="involvement-org involvement-org__1">
+                        <i class="fas fa-robot"></i>
+                        <h3 class="involvement-h3">Robotics Club</h2>
+                        <p class="involvement-p">Mentor | Cincinnati, OH</p>
+                        <p class="involvement-p">Aug 2017 — Present</p>
+                    </a>
+                </div> 
+                
+                <div class="hover-link">
+                    <a style="display:block; color:#fff; opacity: .9" href="https://volunteer.uc.edu/agency/detail/?agency_id=64282" target="_blank" class="involvement-org involvement-org__2">
+                        <i class="fas fa-code"></i>
+                        <h3 class="involvement-h3">Bearcat Coders</h2>
+                        <p class="involvement-p">Volunteer | Cincinnati, OH</p>
+                        <p class="involvement-p">Nov 2015 — Sep 2017</p>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="container row2 involvement-row__2">  
+                <div class="hover-link">
+                    <a style="display:block; color: #fff; opacity: .9" href="https://www.acm.org/">
+                        <i class="fas fa-laptop"></i>
+                        <h3 class="involvement-h3">ACM</h2>
+                        <p class="involvement-p">Member | Cincinnati, OH</p>
+                        <p class="involvement-p">Nov 2015 — May 2020</p>
+                    </a>
+                </div>
+                    
+                <div class="hover-link">
+                    <a style="display:block; color: #fff; opacity: .9" href="https://www.scouting.org/">
+                        <i class="fas fa-hiking"></i>
+                        <h3 class="involvement-h3">Boy Scouts</h2>
+                        <p class="involvement-p">Troop Leader | Cincinnati, OH</p>
+                        <p class="involvement-p">Aug 2003 — Dec 2018</p>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container contact-container">
+            <h1 class="contact-h1">You can reach me at <a href="mailto:mccarki.p@gmail.com" class="contact-link">mccarki.p@gmail.com</a></h1>
+            <h1 class="contact-h1">I'm also on <a target="_blank" href="https://www.github.com/mccarthykp" class="contact-link">Github</a> & <a target="_blank" href="https://www.linkedin.com/in/mccarki" class="contact-link hoverable">LinkedIn</a></h1>
+        </div>
+    </section>
+
+    <script src="/js/script.js"></script>
     
-    <footer id="contact" class="contact"></footer>
 </body>
 </html>
