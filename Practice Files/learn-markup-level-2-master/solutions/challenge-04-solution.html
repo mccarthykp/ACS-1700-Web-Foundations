@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>My First Form</title>
+  </head>
+  <body>
+
+    <header>
+      <h1>My First Form</h1>
+    </header>
+
+    <main>
+      <form>
+        <fieldset>
+          <legend>Please enter your information:</legend>
+
+          <p>
+            <label>
+              What is your name? <br>
+              <input type="text" name="firstname">
+            </label>
+          </p>
+
+          <p>
+            <label>
+              What is your email address? <br>
+              <input type="email" name="email">
+            </label>
+          </p>
+
+          <p>
+            <label>
+              How many siblings do you have? <br>
+              <input type="number" name="num-siblings" min="0" max="10">
+          </label>
+          </p>
+
+          <p>
+            <label>
+              When were you born? <br>
+              <input type="date">
+          </label>
+          </p>
+
+          <p>
+            <label>
+              What is your favorite beverage? <br>
+              <select name="beverage">
+                <option value="coffee">Coffee</option>
+                <option value="tea">Tea</option>
+              </select>
+            </label>
+          </p>
+
+          <p>
+            <label>
+              What is your favorite color? <br>
+              <input type="color" name="fave-color">
+            </label>
+          </p>
+
+          <p>
+            Which is your favorite? Select only one. <br>
+            <label>
+              <input type="radio" name="animal" value="dogs">
+              Dogs
+            </label><br>
+            <label>
+              <input type="radio" name="animal" value="cats">
+              Cats
+            </label>
+          </p>
+
+          <p>
+            Which hobbies do you enjoy? Select all that apply. <br>
+            <label>
+              <input type="checkbox" name="hobbies" value="hiking">
+              Hiking
+            </label><br>
+            <label>
+              <input type="checkbox" name="hobbies" value="music">
+              Music
+            </label><br>
+            <label>
+              <input type="checkbox" name="hobbies" value="video-games">
+              Video Games
+            </label>
+          </p>
+
+          <p>
+            <input type="submit" value="Submit My Answers!">
+          </p>
+        </fieldset>
+      </form>
+			<p id="display"></p>
+    </main>
+
+  <script>
+		const form = document.querySelector('form')
+			form.addEventListener('submit', (e) => {
+				e.preventDefault()
+				console.log('form submitted')
+				const text = document.querySelector('input[type=text]')
+				if (!text) {
+					console.log('You\'re missing input text!')
+				}
+				const email = document.querySelector('input[type=email]')
+				if (!email) {
+					console.log('You\'re missing input email!')
+				}
+				const number = document.querySelector('input[type=number]')
+				if (!number) {
+					console.log('You\'re missing input number!')
+				}
+				const date = document.querySelector('input[type=date]')
+				if (!date) {
+					console.log('You\'re missing input date!')
+				}
+				const select = document.querySelector('select')
+				if (!select) {
+					console.log('You\'re missing input select!')
+				}
+				const color = document.querySelector('input[type=color]')
+				if (!color) {
+					console.log('You\'re missing input color!')
+				}
+				let pet = ''
+				const radio = Array.from(document.querySelectorAll('input[type=radio]'))
+				if (radio.length === 0) {
+					console.log('You\'re missing input radio!')
+				} else {
+					radio.forEach((b) => {
+						if (b.checked) {
+							pet = b.value
+						}
+					})
+				}
+				let hobbies = ''
+				const checkbox = Array.from(document.querySelectorAll('input[type=checkbox]'))
+				if (checkbox.length === 0) {
+					console.log('You\'re missing input checkbox!')
+				} else {
+					checkbox.forEach((b) => {
+						if (b.checked) {
+							hobbies += b.value + ' '
+						}
+					})
+				}
+				const results = `${text.value} is an amazing developer with ${number.value} siblings, born in ${date.value} who drinks ${select.value} from a ${color.value} coffee mug with ${pet} by their side, while they work on ${hobbies}`
+				document.getElementById('display').innerHTML = results
+				console.log(results);
+			});
+	</script>
+  </body>
+</html>
