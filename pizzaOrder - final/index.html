@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Pizza Order</title>
+</head>
+<body>
+    <section class="upper-left">
+        <h1 class="bold order-form">Order Form</h1>
+        <p>Order Name:</p>
+        <input label='Name' type="text" placeholder="Enter name" maxlength="20">
+        <p>Diameter (in):</p>
+        <input value=1 id='d' label='Diameter' type="range" min=12 list="tickmarks">
+        <p>Choose Topping:</p>
+        <select id="select_topping">
+            <!-- <option label='None' value="none">None</option> -->
+            <option label="Cheese" value="cheese">Cheese</option>
+            <option label='Pepperoni' value="pepperoni">Pepperoni</option>
+            <option label='Sausage' value="sausage">Sausage</option>
+            <option label='Onion' value="onion">Onion</option>
+            <option label='Tomatoes' value="tomatoes">Tomatoes</option>
+        </select>
+    </section>
+    <section class="upper-right">
+        <h1>Order Details</h1>
+        <p>Name: <span id="name-reader"></span></p>
+        <p>Diameter: <span id="diameter-reader">12"</span></p>
+        <p>Cost: <span id="cost-reader">$5.65</span></p>
+    </section>
+    <section class="lower-left">
+        <h1 class="bold order-visualizer">Order Visualization</h1>
+        <div id='outputPizza' class="pizza"></div>
+    </section>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
