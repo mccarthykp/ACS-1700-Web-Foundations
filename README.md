@@ -10,3 +10,4 @@
 6. [Lab 4 - Plant Watering](https://github.com/mccarthykp/ACS-1700-Web-Foundations/tree/main/Past%20Assignments/Lab-4)
 7. [E-commerce Tutorial](https://github.com/mccarthykp/ACS-1700-Web-Foundations/tree/main/E-commerce%20Tutorial)
 8. [Tip Calculator](https://github.com/mccarthykp/ACS-1700-Web-Foundations/tree/main/Tip%20Calculator)
+9. [Single Page Site](https://github.com/mccarthykp/ACS-1700-Web-Foundations/tree/main/Single%20Page%20Site)
